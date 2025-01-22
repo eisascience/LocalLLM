@@ -1,1 +1,15 @@
+## 2. Choose a Base Model
+
+Since we’re just getting started and want to keep everything local, we pick a smaller pretrained model from the Hugging Face Hub, for example (these are smaller models that can train or finetune more quickly on Mac hardware.):
+
+```
+GPT-2 (small variant)
+distilgpt2 (even smaller, good for quick tests)
+GPT-Neo 125M from EleutherAI
+```
+
+
+When building a multimodal proof-of-concept (POC) where some inputs are numeric (e.g., vitals, lab values), some are text (e.g., text notes), and some are images, the most important question is which base model (or combination of models) can handle these modalities in a unified way.
+
+Below is an overview of popular approaches and some practical advice on selecting a base model for local fine-tuning:
 
