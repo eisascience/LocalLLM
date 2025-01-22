@@ -31,20 +31,34 @@ It’s good practice to create a virtual environment to manage your project’s 
 ```
 python3 -m venv llm-env
 source llm-env/bin/activate
+
+or
+
+/opt/homebrew/bin/python3.11 -m venv llm-env
+source llm-env/bin/activate
+python --version
+
 ```
 
-to deactivate, use:
+to deactivate or remove use:
 ```
 deactivate
+
+rm -rf llm-env
+
 ```
 
 ## 1.4. Install Required Python Libraries
 You’ll need transformers, datasets, and a deep learning backend (e.g. PyTorch) to train or finetune models locally.
 
-
+```
 pip install --upgrade pip
-pip install torch torchvision torchaudio  # or "pip install torch --upgrade" if you only need PyTorch
+pip install torch torchvision torchaudio
 pip install transformers datasets
-pip install accelerate  # For optimized training on Mac M1/M2 or CPU
-(As of PyTorch 2.0, macOS (especially Apple Silicon) has improved support for MPS acceleration, which can speed up training.)
+pip install accelerate
+```
+
+accelerate package is for optimized training on Mac M1/M2 or CPU.
+As of PyTorch 2.0, macOS (especially Apple Silicon) has improved support for MPS acceleration, which can speed up training.
+
 
